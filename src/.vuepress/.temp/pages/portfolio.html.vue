@@ -1,7 +1,10 @@
 <template><div><h2 id="介绍" tabindex="-1"><a class="header-anchor" href="#介绍"><span>介绍</span></a></h2>
-<p>这是一个档案主页的案例。</p>
-<p>要使用此布局，你应该在页面 Frontmatter 中设置 <code v-pre>home: true</code> 和 <code v-pre>portfolio: true</code>。</p>
-<p>相关配置文档请见 <a href="https://theme-hope.vuejs.press/zh/guide/blog/home.html#%E6%A1%A3%E6%A1%88%E7%B1%BB%E5%9E%8B%E4%B8%BB%E9%A1%B5" target="_blank" rel="noopener noreferrer">档案主页</a>。</p>
+<p>其实在数十年前，陆陆续续就有很多前辈前往大陆旅游，那时更富有壮游感。</p>
+<p>近廿年来，中国经济飞奔，随著资讯传递广泛，也有更多的旅游爱好前往大陆旅游。</p>
+<p>现今到大陆去旅游，最重要的就是<code v-pre>支付宝</code> 和 <code v-pre>微信支付</code>以及搭乘火车所需查验的<code v-pre>台胞证</code>或<code v-pre>台湾居民居住证</code>。</p>
+<p>湾湾因为工作关系，较常接解，所以将这些信息整理成文档，供各位朋友查阅使用。</p>
+<p>信息瞬变，若有需要改正之处，也请您不吝指教，让有需要的朋友能更便利，</p>
+<p>祝 大家 旅游安康</p>
 </div></template>
 
 

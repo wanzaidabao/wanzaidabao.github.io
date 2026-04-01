@@ -50,6 +50,7 @@ jobs:
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
+        id: deploy
         uses: crazy-max/ghaction-github-pages@v4
         with:
           # 部署到 gh-pages 分支
@@ -60,9 +61,25 @@ jobs:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN_WANZAIDABAO0724 }}
 
-      - name: send default message
+
+      - name: Get deployment time
+        if: always()
+        run: |
+          end_time=$(date +%s)
+          start_time=${{ steps.deploy.outputs.start_time }}
+          if [ -z "$start_time" ]; then
+            echo "DEPLOY_TIME=Deployment failed" >> $GITHUB_ENV
+          else
+            duration=$((end_time - start_time))
+            echo "DEPLOY_TIME=Deployment took $duration seconds" >> $GITHUB_ENV
+          fi
+
+      - name: Send Telegram message
+        if: always()
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: 已完成VuePress部署
+          message: |
+            VuePress部署状态: ${{ job.status }}
+            ${{ env.DEPLOY_TIME }}

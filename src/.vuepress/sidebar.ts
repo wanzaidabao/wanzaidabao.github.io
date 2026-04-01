@@ -1,6 +1,7 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
+  "/faq/": "structure",
   "/": [
     "",
     "portfolio",
@@ -22,5 +23,13 @@ export default sidebar({
       icon: "person-chalkboard",
       link: "https://plugin-md-enhance.vuejs.press/zh/guide/content/revealjs/demo.html",
     },
-  ],
+    {
+      text: "常见问题bat",
+      link: "faq",
+      icon: "circle-question",
+      // 会在 `/faq` 开头的路径激活
+      // 所以当你前往 `/faq/xxx.html` 时也会激活
+      activeMatch: "^/faq",
+    },
+],
 });

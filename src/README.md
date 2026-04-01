@@ -1,7 +1,7 @@
 ---
 home: true
 icon: home
-title: 大陆旅游
+title: 主页
 heroText: 湾湾二岸笔记
 tagline: 你可以在这里放置或是整个项目的描述。
 actions:
@@ -314,8 +314,3 @@ copyright: false
 footer: 使用 <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a> 主题 | MIT 协议, 版权所有 © 2019-至今 Mr.Hope
 ---
 
-这是项目主页的案例。你可以在这里放置你的主体内容。
-
-想要使用此布局，你需要在页面 front matter 中设置 `home: true`。
-
-配置项的相关说明详见 [项目主页配置](https://theme-hope.vuejs.press/zh/guide/layout/home/)。
